@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: DimDate
+    description: This is a date dimension dataset. DateSK is unique.
+    columns:
+      - name: DateSK
+        description: This is the unique identifier.
+        tests:
+          - unique
+          - not_null
+  - name: FactCrosswordTimes
+    description: This dataset has all information about crossword performance.
+    columns:
+      - name: DateFK
+        description: This is the unique identifier.
+        tests:
+          - unique
+          - not_null
